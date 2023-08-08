@@ -1,11 +1,8 @@
-import java.util.Scanner;
 public class string8{
     public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the string to be checked:");
-        String str=sc.nextLine();
-        int leng=str.length();
-        System.out.println("Enter the character to be replaced");
-
+        char []a={'a','b','c','d','e','f','g','h','i','j'};
+        for(int i=0;i<a.length;i++){
+            System.out.print(a[i]+" ");
+        }  
     }
 }

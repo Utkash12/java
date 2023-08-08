@@ -9,5 +9,11 @@ public class string7{
         System.out.println(str3.indexOf('i'));
         System.out.println(str3.startsWith("This"));
         System.out.println(str3.endsWith("string"));
+        System.out.println(str3.replace('i','a'));
+        System.out.println(str3.replaceFirst("is","was"));
+        System.out.println(str3.replaceAll("is","was"));
+        System.out.println(str3.replace("is","was"));
+        System.out.println(str3.replaceAll("is(.)","was "));
+        System.out.println(str3.replaceAll("is(.*)","was"));
     }
 }
