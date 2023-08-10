@@ -1,3 +1,4 @@
+import java.util.*;
 public class string8{
     public static void main(String[] args){
         char []a={'a','b','c','d','e','f','g','h','i','j'};
