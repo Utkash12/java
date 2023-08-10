@@ -8,6 +8,13 @@ public class string14 {
         System.out.println(x1);
         System.out.println(x2);
         System.out.println(y1);
-        System.out.print(y1.substring(0,2)+'y'+y1.substring(3));
+        System.out.println(y1.substring(0,2)+'y'+y1.substring(3));
+        String z1="hello";
+        String z2="hello";
+        System.out.println(z1==z2);
+        String z3=new String("hello");
+        System.out.println(z1==z3);
+        System.out.println(z1.equals(z3));
+        System.out.println(x2.replace('i','j'));
     }
 }
