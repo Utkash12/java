@@ -13,10 +13,10 @@ public class ascii{
             }
             else if(index>=97 && index<=122){
                 flag=false;
-            }
+            } 
         }
         if(flag==true){
-            
+
         }
     }
 }
