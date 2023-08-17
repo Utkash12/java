@@ -30,7 +30,6 @@ public class string59{
                     count++;
                 }
             }
-            
         }
         System.out.println("The number of pallindromic substrings are: "+count);
     }
