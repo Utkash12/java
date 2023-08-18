@@ -7,7 +7,7 @@ public class string61{
         while(j>i){
             if(str1.charAt(i)==str1.charAt(j)){
                 i++;
-                j--;
+                j--;  
                 return true;  
             }
             else{
