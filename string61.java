@@ -3,7 +3,7 @@ public class string61{
     public static boolean isPalindrome(StringBuilder str1){
         int i=0;
         boolean flag=true;
-        int j=str1.length()-1;
+        int j=str1.length()-1;  
         while(j>i){
             if(str1.charAt(i)==str1.charAt(j)){
                 i++;
