@@ -8,7 +8,7 @@ public class string61{
             if(str1.charAt(i)==str1.charAt(j)){
                 i++;
                 j--;
-                return true;
+                return true;  
             }
             else{
                 return false;
