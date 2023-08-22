@@ -4,20 +4,28 @@ class student{
     private String address;
     
     public void setRoll(int r){
+        if(r<=0){
+            System.out.println("Invalid Roll Number");
+            return;
+        }
         this.roll=r;
     }
     public int getRoll(){
         return roll;
     }
     public void setMarks(float m){
+        if(m<0){
+            System.out.println("Invalid Marks");
+            return;
+        }
         this.marks=m;
     }
     public float getMarks(){
         return marks;
     }
-    public String setAddress(String a){
+    public void setAddress(String a){
         this.address=a;
-    } 
+    }
     public String getAddress(){
         return address;
     }
