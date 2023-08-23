@@ -15,6 +15,6 @@ public class inheritance2 extends animal{
         inheritance2 dog=new inheritance2();
         dog.barks();
         dog.eat();
-        dog.walks();
+        dog.walks(); 
     }
 }
