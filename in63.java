@@ -4,7 +4,7 @@ class shape{
         System.out.println("I'm not a parametrized constructor....");
     }
     shape(int r){
-        this.radius=r;
+        this.radius=r;    
     }
 }
 class cylinder extends shape{
