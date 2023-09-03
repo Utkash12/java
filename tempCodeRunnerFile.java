@@ -1,1 +1,2 @@
- // str1.deleteCharAt(0);
+father ther1=new child1();
+        ther1.print1();
