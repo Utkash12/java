@@ -1,4 +1,4 @@
-public class ll25{
+public class ll26{
     public static class Node{
         int data;
         Node next;
@@ -12,6 +12,7 @@ public class ll25{
         Node tail=null;
         void insertAtEnd(int val){
             Node temp=new Node(val);
+            // Node temp=head;
             if(head==null){
                 head=temp;
                 tail=temp;
@@ -20,28 +21,6 @@ public class ll25{
                 tail.next=temp;
                 tail=temp;
             }
-        }
-        void insertAtHead(int val){
-           Node temp=new Node(val);
-           if(head==null){
-               head=temp;
-               tail=temp;
-           }
-           else{
-               temp.next=head;
-               head=temp;
-           }
-        }
-        void insertAt(int index,int val){
-            
-            Node t=new Node(val);
-            Node temp=head;
-            for(int i=1;i<=index-1;i++){
-                temp=temp.next;
-            }
-            t.next=temp.next;
-            temp.next=t;
-            
         }
         void display(){
             Node temp=head;
@@ -57,11 +36,6 @@ public class ll25{
         ll.insertAtEnd(10);
         ll.insertAtEnd(15);
         ll.insertAtEnd(20);
-        ll.insertAtHead(2);
-        ll.insertAtHead(4);
-        ll.insertAtHead(6);
-        ll.insertAt(3,8);
-        ll.insertAt(5,12);
         ll.display();
-    }
+    } 
 }

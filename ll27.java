@@ -1,4 +1,4 @@
-public class ll25{
+public class ll27{
     public static class Node{
         int data;
         Node next;
@@ -22,26 +22,43 @@ public class ll25{
             }
         }
         void insertAtHead(int val){
-           Node temp=new Node(val);
-           if(head==null){
-               head=temp;
-               tail=temp;
-           }
-           else{
-               temp.next=head;
-               head=temp;
-           }
+            Node temp=new Node(val);
+            if(head==null){
+                head=temp;
+                tail=temp;
+            }
+            else{
+                temp.next=head;
+                head=temp;
+            }
         }
-        void insertAt(int index,int val){
-            
-            Node t=new Node(val);
+        void insertAt(int ind,int val){
             Node temp=head;
-            for(int i=1;i<=index-1;i++){
+            Node t=new Node(val);
+            if(ind==0){
+                t.next=head;
+                head=t;
+            }
+            else if(ind==size()){
+                tail.next=t;
+                tail=t;
+            }
+            else{
+            for(int i=1;i<=ind-1;i++){
                 temp=temp.next;
             }
             t.next=temp.next;
             temp.next=t;
-            
+        }
+        }
+        int size(){
+            Node temp=head;
+            int count=0;
+            while(temp!=null){
+                count++;
+                temp=temp.next;
+            }
+            return count;
         }
         void display(){
             Node temp=head;
@@ -54,14 +71,17 @@ public class ll25{
     public static void main(String[] args){
         linkedlist ll=new linkedlist();
         ll.insertAtEnd(5);
-        ll.insertAtEnd(10);
-        ll.insertAtEnd(15);
-        ll.insertAtEnd(20);
+        ll.insertAtEnd(7);
+        ll.insertAtEnd(9);
+        ll.insertAtEnd(11);
+        // ll.display();
         ll.insertAtHead(2);
         ll.insertAtHead(4);
         ll.insertAtHead(6);
-        ll.insertAt(3,8);
-        ll.insertAt(5,12);
+        ll.insertAtHead(8);
+        // ll.display();
+        ll.insertAt(3,100);
+        ll.insertAt(6,200);
         ll.display();
     }
 }
