@@ -28,8 +28,18 @@ public class ll56 {
                 tail=temp;
             } 
             else{
-                temp.nex
+                temp.next=head;
+                head=temp;
             }
+        }
+        void insertAt(int idx,int val){
+            Node temp=new Node(val);
+            Node t=head;
+            for(int i=1;i<=idx;i++){
+                t=t.next;
+            }
+            t.next=temp.next;
+            temp.next=t;
         }
         void display(){
             Node temp=head;
@@ -45,6 +55,13 @@ public class ll56 {
         ll.insertAtEnd(4);
         ll.insertAtEnd(6);
         ll.insertAtEnd(8);
+        ll.insertAtEnd(10);
+        ll.insertAtEnd(12);
+        ll.insertAtEnd(14);
+        ll.insertAtHead(1);
+        ll.insertAtHead(2);
+        ll.insertAtHead(3);
+        ll.insertAt(3,100);
         ll.display();
     }
 }
