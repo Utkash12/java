@@ -38,6 +38,24 @@ public class ll86{
         }
         return slow;
     }
+    public static boolean isPalindrome(Node head){
+        Node slow=head;
+        Node fast=head;
+        while(fast.next!=null && fast.next.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        Node rev=reverse(slow.next);
+        Node curr=head;
+        while(rev!=null){
+            if(rev.data!=curr.data){
+                return false;
+            }
+            rev=rev.next;
+            curr=curr.next;
+        }
+        return true;
+    }
     public static void main(String[] args){
         linkedlist ll=new linkedlist();
         ll.insertAt(2);
@@ -49,5 +67,7 @@ public class ll86{
         ll.insertAt(12);
         ll.display();
         System.out.println("The middle element will be : "+ middle(ll.head).data);
+        System.out.println("Is the linked list palindrome : "+ isPalindrome(ll.head));
+        
     }
 }
