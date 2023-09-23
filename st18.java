@@ -1,10 +1,10 @@
-public class st17{
+public class st18{
     public static class Stack{
         private int[] arr=new int[5];
         int idx=0;
         void push(int x){
             if(idx>5){
-                System.out.println("Stack is overflow....");
+                System.out.println("Stack overflow...");
             }
             else{
                 arr[idx]=x;
@@ -17,10 +17,10 @@ public class st17{
                 return -1;
             }
             else{
-                int n=arr[idx];
+                int x=arr[idx];
                 arr[idx]=0;
                 idx--;
-                return n;
+                return x;
             }
         }
         void display(){
@@ -41,6 +41,9 @@ public class st17{
         st.push(30);
         st.push(40);
         st.display();
-        System.out.println(st.pop());   
+        System.out.println(st.pop());
+        System.out.println(st.pop());
+        System.out.println(st.pop());
+        st.display();
     }
 }
