@@ -14,11 +14,23 @@ public class st19{
             Node temp=new Node(x);
             if(head==null){
                 head=temp;
+                size++;
             }
             else{
                 temp.next=head;
                 head=temp;
                 size++;
+            }
+        }
+        int pop(){
+            if(head==null){
+                System.out.println("Stack is empty...");
+                return -1;
+            }
+            else{
+                int x=head.data;
+                head=head.next;
+                return x;
             }
         }
         void display(){
@@ -35,6 +47,10 @@ public class st19{
         st.push(20);
         st.push(30);
         st.push(40);
+        st.display();
+        System.out.println(st.pop());
+        System.out.println(st.pop());
+        System.out.println(st.pop());
         st.display();
     }
 }
