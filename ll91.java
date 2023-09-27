@@ -1,5 +1,5 @@
-// import java.util.Scanner;
-public class ll90{
+import java.util.Scanner;
+public class ll91{
     public static class Node{
         int data;
         Node next;
@@ -29,25 +29,15 @@ public class ll90{
                 temp=temp.next;
             }
         }
-        void reverse(){
-            Node prev=null;
-            Node curr=head;
-            Node next=null;
-            while(curr!=null){
-                next=curr.next;
-                curr.next=prev;
-                prev=curr;
-                curr=next;
+        int size(){
+            int count=0;
+            Node temp=head;
+            while(temp!=null){
+                count++;
+                temp=temp.next;
             }
-            head=prev;
+            return count;
         }
-        // void revme(){
-        //     Node temp=head;
-        //     while(temp!=null){
-        //         temp=temp.next;
-        //         System.out.println(temp.data);
-        //     }
-        // }
     }
     public static void main(String[] args){
         linkedlist ll=new linkedlist();
@@ -55,10 +45,6 @@ public class ll90{
         ll.insertAt(20);
         ll.insertAt(30);
         ll.display();
-        System.out.println("After reversing");
-        // ll.revme();
-        System.out.println("After reversing");
-        ll.reverse();
-        ll.display();
+        System.out.println(ll.size());
     }
 }
