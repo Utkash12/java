@@ -1,2 +1,4 @@
- // System.out.println("Stack after insertion: ");
-        // System.out.println(st1);
+ // ll.display();
+        // System.out.println("After reversing:");
+        // ll.reverse();
+        // ll.display();

@@ -41,12 +41,34 @@ public class ll90{
             }
             head=prev;
         }
+        // void rev1(){
+        //     Node current=head.next;
+        //     Node prev=head;
+        //     while(current!=null){
+        //         current.next=prev;
+        //         prev=current;
+        //         current=current.next;
+        //     }
+        //     // head.next=null;
+        //     head=prev;
+        // }
         // void revme(){
         //     Node temp=head;
         //     while(temp!=null){
         //         temp=temp.next;
         //         System.out.println(temp.data);
         //     }
+        // }
+        // void rev2(){
+        //     Node curr=head;
+        //     Node prev=null;
+        //     while(curr!=null){
+        //         Node next=curr.next;
+        //         curr.next=prev;
+        //         prev=curr;
+        //         curr=next;
+        //     }
+        //     head=prev;
         // }
     }
     public static void main(String[] args){
@@ -60,5 +82,10 @@ public class ll90{
         System.out.println("After reversing");
         ll.reverse();
         ll.display();
+        // System.out.println("Final");
+        // // ll.display();
+        // System.out.println("After reversing");
+        // ll.rev1();
+        // ll.display();
     }
 }
