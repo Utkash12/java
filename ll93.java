@@ -28,17 +28,42 @@ public class ll93{
                 temp=temp.next;
             }
         }
-        void reverse(){
-            Node prev=null;
-            Node curr=head;
-            Node next=null;
-            while(curr!=null){
-                next=curr.next;
-                curr.next = prev;
-                prev = curr;
-                curr = next;
+        // void reverse(){
+        //     Node prev=null;
+        //     Node curr=head;
+        //     Node next=null;
+        //     while(curr!=null){
+        //         next=curr.next;
+        //         curr.next = prev;
+        //         prev = curr;
+        //         curr = next;
+        //     }
+        //     head=prev;
+        // }
+        // void reverse() {
+        //     Node prev = null;
+        //     Node next = null;
+        //     Node current = head;
+        //     while (current != null) {
+        //         next = current.next;
+        //         next.next = current;
+        //         prev = current;
+        //         current = next;
+        //     }
+        //     head = prev;
+        // }
+        
+        void reverse() {
+            Node prev = null;
+            Node next = null;
+            Node current = head;
+            while (current != null) {
+                next = current.next;
+                next.next = current;
+                prev = current;
+                current = next;
             }
-            head=prev;
+            head = prev;
         }
         
         // void reverse() {
