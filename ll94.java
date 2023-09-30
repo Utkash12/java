@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class ll94{
     public static class Node{
         int data;
@@ -32,6 +33,18 @@ public class ll94{
                 head=temp;
             }
         }
+        void insertMiddle(int data,int idx){
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter the index:");
+            idx=sc.nextInt();
+            Node temp=new Node(data);
+            Node curr=head;
+            for(int i=0;i<idx-1;i++){
+                curr=curr.next;
+            }
+            curr.next=temp;
+            temp.next=curr.next;
+        }
         void display(){
             Node temp=head;
             while(temp!=null){
@@ -50,6 +63,9 @@ public class ll94{
         System.out.println("After insertion:");
         ll.insertStart(10);
         ll.insertStart(20);
+        ll.display();
+        System.out.println("After middle insertion:");
+        ll.insertMiddle(30,2);
         ll.display();
     }
 }
