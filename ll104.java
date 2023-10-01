@@ -49,6 +49,45 @@ public class ll104 {
                 size--;
             }
         }
+        public static boolean isBalanced(String str){
+            Stack st=new Stack();
+            for(int i=0;i<str.length();i++){
+                char ch=str.charAt(i);
+                if(ch=='(' || ch=='{' || ch=='['){
+                    st.push(ch);
+                }
+                else if(ch==')'){
+                    if(st.size()==0 || st.head.ch!='('){
+                        return false;
+                    }
+                    else{
+                        st.pop();
+                    }
+                }
+                else if(ch=='}'){
+                    if(st.size()==0 || st.head.ch!='{'){
+                        return false;
+                    }
+                    else{
+                        st.pop();
+                    }
+                }
+                else if(ch==']'){
+                    if(st.size()==0 || st.head.ch!='['){
+                        return false;
+                    }
+                    else{
+                        st.pop();
+                    }
+                }
+            }
+            if(st.size()==0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
         void display(){
             Node temp=head;
             while(temp!=null){
