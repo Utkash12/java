@@ -8,7 +8,13 @@ public class cons {
                 st.push(arr[i]);
             }
             else if(arr[i]==st.peek()){
-                if(i==n-1 || arr[i]!=arr[i+1]){
+                // if(i==n-1 || arr[i]!=arr[i+1]){
+                //     st.pop();
+                // }
+                if(arr[i]==arr[i+1]){
+                    arr[i]=arr[i+1];
+                }
+                else{
                     st.pop();
                 }
             }
