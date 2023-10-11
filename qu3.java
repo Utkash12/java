@@ -47,7 +47,7 @@ public class qu3 {
         //     }
         // }
         // public boolean isEmpty(){
-        //     if(arr.size()==0){
+        //     if(arr.size==0){
         //         return true;
         //     }
         //     else{
