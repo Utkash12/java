@@ -16,11 +16,13 @@ public class qu15 {
         void push(int data){
             if(q.size()==0){
                 q.add(data);
+                size++;
             }
             else{
                 q.add(data);
                 for(int i=0;i<q.size()-1;i++){
                     q.add(q.remove());
+                    size++;
                 }
             }
         }
@@ -51,11 +53,22 @@ public class qu15 {
     }
     public static void main(String[] args){
         
-        Queue<Integer> q=new LinkedList<>();
-        q.add(10);
-        q.add(20);
-        q.add(30);
-        System.out.println(q);
+        // Queue<Integer> q=new LinkedList<>();
+        // q.add(10);
+        // q.add(20);
+        // q.add(30);
+        // System.out.println(q);
+        Stack st=new Stack();
+        st.push(10);
+        st.push(20);
+        st.push(30);
+        st.display();
+        System.out.println(st.top());
+        System.out.println(st.pop());
+        System.out.println(st.size());
+        
+        st.display();
+
 
     }
 }
