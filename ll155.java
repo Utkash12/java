@@ -1,14 +1,17 @@
 import java.util.*;
-public class ll153{
-    public static boolean isBalanced(String str){
+public class ll155{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the String...");
         Stack<Character> st=new Stack<>();
+        String str=sc.nextLine();
         for(int i=0;i<str.length();i++){
             char ch=str.charAt(i);
             if(ch=='('){
                 st.push(ch);
             }
             else{
-                if(st.size()>0 && st.peek()=='('){
+                if(st.size()>0 && st.peek()=='(' ){
                     st.pop();
                 }
                 else{
@@ -17,17 +20,10 @@ public class ll153{
             }
         }
         if(st.size()>0){
-            return false;
+            System.out.println("String is unbalanced...");
         }
         else{
-            return true; 
+            System.out.println("String is balanced...");
         }
-    }
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the string..");
-        String str=sc.nextLine();
-        System.out.println(isBalanced(str));
-
     }
 }
