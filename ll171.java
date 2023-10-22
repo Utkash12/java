@@ -12,8 +12,7 @@ public class ll171{
             }
             if(st.size()==0){
                 ans[i]=-1;
-            }
-            else{
+            } else{
                 ans[i]=st.peek();
             }
             st.push(arr[i]);
