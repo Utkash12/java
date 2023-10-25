@@ -8,7 +8,9 @@ public class hm1{
         System.out.println(hh);
         System.out.println(hh.containsKey(1));
         System.out.println(hh.containsValue("anurag"));
-        
+        System.out.println(hh.keySet());
+        System.out.println(hh.values());
+
         System.out.println(hh.get(1));
         HashMap<Integer,Integer> hs=new HashMap<>();
         hs.put(1,3);
