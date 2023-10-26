@@ -11,5 +11,18 @@ public class hm7{
             System.out.println(hm.get(i));
         }
         System.out.println(hm.get(4));
+        int max=0;
+        int ans=0;
+        for(int i:hm.keySet()){
+            if(max<hm.get(i)){
+                max=hm.get(i);
+                ans=i;
+            }
+            else{
+                continue;
+            }
+        }
+        System.out.println(ans);
+        // System.out.println(hm.containsKey(3));
     }
 }

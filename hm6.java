@@ -15,6 +15,18 @@ public class hm6{
         System.out.println(hm.entrySet());
         System.out.println(hm.keySet());
         System.out.println(hm.values());
+        int max=0;
+        int ans=0;
+        for (int i : hm.keySet()) {
+            if (max < hm.get(i)) {
+                max = hm.get(i);
+                ans = i;
+            } else {
+                continue;
+            }
+        }
+        System.out.println("The maximum frequency is of "+ans);
+
     }
     
 }
