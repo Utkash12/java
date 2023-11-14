@@ -4,7 +4,7 @@ public class arr40 {
         int k=3;
         int n=arr.length;
         int[] ans=new int[n];
-        k=k%n;
+        // k=k%n;
         int j=0;
         for(int i=n-k;i<n;i++){
             ans[j++]=arr[i];
