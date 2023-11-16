@@ -4,10 +4,10 @@ public class arr51{
         int left=0;
         int right=arr.length-1;
         while(left<right){
-            if(left%2==0){
+            if(arr[left]%2==0){
                 left++;
             }
-            else if(!(right%2==0)){
+            else if(!(arr[right]%2==0)){
                 right--;
             }
             else{
