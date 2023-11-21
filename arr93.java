@@ -6,9 +6,10 @@ public class arr93{
         int high=arr.length-1;
         int mid=(high+low)/2;
         int key=90;
+        int flag=0;
         while(high>low){
             if(arr[mid]==key){
-                System.out.println("Element found at index "+mid);
+                flag=1;
             }
             else if(key<arr[mid]){
                 high=mid-1;
@@ -17,9 +18,14 @@ public class arr93{
                 low=mid+1;
             }
             else{
-                System.out.println("Element not found..");
-                return;
+                flag=0;
             }
+        }
+        if(flag==1){
+            System.out.println("Element found..");
+        }
+        else{
+            System.out.println("Element not found..");
         }
     }
 }
