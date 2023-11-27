@@ -6,6 +6,7 @@ public class str4{
         System.out.println(str.concat(str1));
         str=str.concat(str1);
         System.out.println(str);
+        System.out.println(str.substring(2,8));
 
     }
 }
