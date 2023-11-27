@@ -3,5 +3,8 @@ public class str3{
         String str="abdek dfger";
         System.out.println(str.contains("ab"));
         System.out.println(str.contains("ab"));
+        System.out.println(str.contains("asdd"));
+        System.out.println(str.startsWith("ab"));
+        System.out.println(str.endsWith("er"));
     }
 }
