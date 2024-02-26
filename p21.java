@@ -1,8 +1,8 @@
 public class p21 {
     public static class linkedlist {
+        Node head = null;
+        Node tail = null;
         void insertAt(int data) {
-            Node head = null;
-            Node tail = null;
             Node temp = new Node(data);
             if (head == null) {
                 head = temp;
@@ -12,18 +12,18 @@ public class p21 {
                 tail = temp;
             }
         }
-        // void display(){
-        // Node temp=head;
-        // if(temp==null){
-        // System.out.println("No element in linkedlist");
-        // }
-        // else{
-        // while(temp!=null){
-        // System.out.println(temp.data);
-        // temp=temp.next;
-        // }
-        // }
-        // }
+        void display(){
+        Node temp=head;
+        if(temp==null){
+        System.out.println("No element in linkedlist");
+        }
+        else{
+        while(temp!=null){
+        System.out.println(temp.data);
+        temp=temp.next;
+        }
+        }
+        }
     }
 
     public static class Node {
