@@ -27,7 +27,7 @@ public class p36 {
         }
 
         void display() {
-            Node temp = head;
+            Node temp =  head;
             while (temp != null) {
                 System.out.println(temp.data);
                 temp = temp.next;
