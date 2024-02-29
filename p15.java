@@ -1,5 +1,5 @@
 public class p15{
-    public static class Node {
+    public static  class Node {
         int data;
         Node next;
 
