@@ -33,5 +33,5 @@ public class p43 {
         d.next=e;
         Node q=remove(a,2);
         System.out.println(q.data);
-    }
+    }   
 }
