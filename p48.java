@@ -47,8 +47,12 @@ public class p48 {
             if(head1==head2){
                 return head1;
             }
-            head1=head1.next;
-            head2=head2.next;
+            // head1=head1.next;
+            // head2=head2.next;
+            else{
+                head1=head1.next;
+                head2=head2.next;
+            }
         }
         return null;
     }

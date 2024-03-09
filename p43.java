@@ -33,5 +33,10 @@ public class p43 {
         d.next=e;
         Node q=remove(a,2);
         System.out.println(q.data);
+        //display whole linked list
+        while(a!=null){
+            System.out.println(a.data);
+            a=a.next;
+        }
     }   
 }
