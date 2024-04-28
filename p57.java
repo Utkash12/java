@@ -25,6 +25,27 @@ public class p57 {
         Node slow=head;
         Node fast=head;
         Node prev=null;
-        
+        while(fast!=null && fast.next!=null){
+            prev=slow;
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        Node temp=head;
+        while(temp!=prev){
+            System.out.println(temp.data);
+            temp=temp.next;
+        }
+        Node temp1=slow.next;
+        while(temp1!=null){
+            System.out.println(temp1.data);
+            temp1=temp1.next;
+        }
+        // prev.next=slow.next;
+        // Node mid=head;
+        // while(mid!=null){
+        //     System.out.println(mid.data);
+        //     mid=mid.next;
+        // }
+
     }
 }
