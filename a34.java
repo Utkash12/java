@@ -1,4 +1,4 @@
-public class a33 {
+public class a34 {
     public static class Node {
         int data;
         Node next;
@@ -8,21 +8,23 @@ public class a33 {
             this.next = null;
         }
     }
+
     // find the loop in the linked list
-    public static void loop(Node head){
-        Node slow=head;
-        Node fast=head;
-        while(fast!=null && fast.next!=null){
-            slow=slow.next;
-            fast=fast.next.next;
+    public static void loop(Node head) {
+        Node slow = head;
+        Node fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
             if(slow==fast){
-                System.out.println("Loop found");
-                return;
+                System.out.println("loop found");
             }
         }
-        System.out.println("Loop not found");
+        System.out.println("loop not found");
+
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Node a = new Node(10);
         Node b = new Node(20);
         Node c = new Node(30);
@@ -43,7 +45,7 @@ public class a33 {
         g.next = h;
         h.next = i;
         i.next = j;
-        j.next= null;
+        j.next = f;
         loop(a);
     }
 }
