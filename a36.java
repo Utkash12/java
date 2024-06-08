@@ -9,17 +9,18 @@ public class a36{
         }
     }
     //detect loop in linked list
-    public static boolean detectLoop(Node head){
+    public static void detectLoop(Node head){
         Node slow=head;
         Node fast=head;
         while(fast!=null && fast.next!=null){
             slow=slow.next;
             fast=fast.next.next;
             if(slow==fast){
-                return true;
+                System.out.println("Loop found");
+                return;
             }
         }
-        return false;
+        System.out.println("Loop not found");
     }
     public static void main(String[] args){
         Node a=new Node(10);
@@ -30,5 +31,6 @@ public class a36{
         b.next=c;
         c.next=d;
         d.next=b;
+        detectLoop(a);
     }
 }
