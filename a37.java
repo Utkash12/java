@@ -50,9 +50,10 @@ public class a37{
         y.next=z;
         z.next=null;
         merge(a,x);
-        while(a!=null){
-            System.out.println(a.data);
-            a=a.next;
+        Node t=a;
+        while(t!=null){
+            System.out.println(t.data);
+            t=t.next;
         }
     }
 }
