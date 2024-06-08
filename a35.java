@@ -10,9 +10,29 @@ public class a35{
     }
     //merge the sorted linked list
     public static void merge(Node a,Node b){
-        Node head1=a;
-        Node head2=b;
-        
+        Node dummy = new Node(0);
+        Node temp = dummy;
+        while(a!=null && b!=null){
+            if(a.data<b.data){
+                temp.next = a;
+                a = a.next;
+                temp = temp.next;
+            }else{
+                temp.next = b;
+                b = b.next;
+                temp = temp.next;
+            }
+        }
+        if(a!=null){
+            temp.next = a;
+        }else{
+            temp.next = b;
+        }
+        while(dummy.next!=null){
+            System.out.print(dummy.next.data+" ");
+            dummy = dummy.next;
+        }
+
     }
 
     public static void main(String[] args) {
@@ -33,5 +53,7 @@ public class a35{
         y.next = z;
         z.next = w;
         w.next = v;
+        v.next = null;
+        merge(a,x);
     }
 }
