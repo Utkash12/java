@@ -41,7 +41,7 @@ public class a37{
         Node y=new Node(5);
         Node z=new Node(6);
         a.next=b;
-        b.next=c;
+        b.next=c;  
         c.next=d;
         d.next=e;
         e.next=f;

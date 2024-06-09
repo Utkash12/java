@@ -18,7 +18,7 @@ public class a39{
             prev=current;
             current=next;
         }
-        return prev;
+        return prev;  
     }
     public static void main(String[] args){
         Node a=new Node(10);
